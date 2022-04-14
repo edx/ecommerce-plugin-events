@@ -1,0 +1,8 @@
+.idea
+*.egg-info
+__pycache__/
+coverage.xml
+build/
+.tox/
+**/private.py
+docs/_build

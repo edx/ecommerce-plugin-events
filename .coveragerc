@@ -1,0 +1,13 @@
+[run]
+data_file = .coverage
+omit =
+    docs/*
+    test_settings
+    *migrations*
+    *admin.py
+    *static*
+    *templates*
+    events/settings/*
+    events/data.py
+    events/urls.py
+    events/management/commands/consume_coupon_code_request_events.py
