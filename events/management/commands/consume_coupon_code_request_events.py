@@ -10,20 +10,13 @@ from confluent_kafka.schema_registry.avro import AvroDeserializer
 from confluent_kafka.serialization import StringDeserializer
 from django.conf import settings
 from django.core.management.base import BaseCommand
-from edx_toggles.toggles import SettingToggle
 
 from events.data import CouponCodeRequestEvent
 
 logger = logging.getLogger(__name__)
 
-# .. toggle_name: KAFKA_CONSUMERS_ENABLED
-# .. toggle_implementation: SettingToggle
-# .. toggle_default: False
-# .. toggle_description: Enables the ability to listen and process events from the Kafka event bus
-# .. toggle_use_cases: opt_in
-# .. toggle_creation_date: 2022-01-31
-# .. toggle_tickets: https://openedx.atlassian.net/browse/ARCHBOM-1992
-KAFKA_CONSUMERS_ENABLED = SettingToggle('KAFKA_CONSUMERS_ENABLED', default=True)
+
+KAFKA_CONSUMERS_ENABLED = getattr(settings, 'KAFKA_CONSUMERS_ENABLED', False)
 
 CONSUMER_POLL_TIMEOUT = getattr(settings, 'CONSUMER_POLL_TIMEOUT', 1.0)
 
@@ -140,7 +133,7 @@ class Command(BaseCommand):
         self.handle_message(msg)
 
     def handle(self, *args, **options):
-        if not KAFKA_CONSUMERS_ENABLED.is_enabled():
+        if not KAFKA_CONSUMERS_ENABLED:
             logger.error("Kafka consumers not enabled")
             return
         try:

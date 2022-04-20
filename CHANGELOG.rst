@@ -12,14 +12,18 @@ Change Log
 .. There should always be an "Unreleased" section for changes pending release.
 
 Unreleased
-~~~~~~~~~~
+----------
 
 *
 
-[0.1.0] - 2022-04-07
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0.1.1]
+-------
+feat: remove edx-toggles
 
-Added
-_____
+[0.1.0]
+-------
+feat: initial setup
+
+--------------------------------------------------------------------------------
 
 * First release on PyPI.

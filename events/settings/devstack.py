@@ -13,3 +13,4 @@ def plugin_settings(settings):
     settings.SCHEMA_REGISTRY_API_SECRET = ''
     settings.KAFKA_API_KEY = ''
     settings.KAFKA_API_SECRET = ''
+    settings.KAFKA_CONSUMERS_ENABLED = True

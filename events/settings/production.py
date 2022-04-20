@@ -3,5 +3,5 @@ Production settings values.
 """
 
 
-def plugin_settings(settings):  # pylint: disable=unused-argument
-    pass
+def plugin_settings(settings):
+    settings.KAFKA_CONSUMERS_ENABLED = False
