@@ -16,6 +16,10 @@ Unreleased
 
 *
 
+[0.1.2]
+-------
+fix: move KAFKA_CONSUMERS_ENABLED out of settings
+
 [0.1.1]
 -------
 feat: remove edx-toggles
