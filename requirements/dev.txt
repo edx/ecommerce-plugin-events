@@ -4,11 +4,11 @@
 #
 #    make upgrade
 #
-asgiref==3.5.0
+asgiref==3.5.2
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.11.3
+astroid==2.11.6
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -22,7 +22,7 @@ bleach==5.0.0
     # via
     #   -r requirements/quality.txt
     #   readme-renderer
-certifi==2021.10.8
+certifi==2022.6.15
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -30,7 +30,7 @@ certifi==2021.10.8
 cffi==1.15.0
     # via
     #   -r requirements/quality.txt
-    #   cryptography
+    #   pynacl
 chardet==4.0.0
     # via diff-cover
 charset-normalizer==2.0.12
@@ -38,12 +38,13 @@ charset-normalizer==2.0.12
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-click==8.1.2
+click==8.1.3
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
     #   click-log
     #   code-annotations
+    #   edx-django-utils
     #   edx-lint
     #   pip-tools
 click-log==0.4.0
@@ -60,21 +61,17 @@ commonmark==0.9.1
     # via
     #   -r requirements/quality.txt
     #   rich
-confluent-kafka==1.8.2
+confluent-kafka==1.9.0
     # via -r requirements/quality.txt
-coverage[toml]==6.3.2
+coverage[toml]==6.4.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   codecov
     #   pytest-cov
-cryptography==36.0.2
-    # via
-    #   -r requirements/quality.txt
-    #   secretstorage
-diff-cover==6.5.0
+diff-cover==6.5.1
     # via -r requirements/dev.in
-dill==0.3.4
+dill==0.3.5.1
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -84,7 +81,7 @@ distlib==0.3.4
     #   virtualenv
 django==3.2.13
     # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -c requirements/common_constraints.txt
     #   -r requirements/quality.txt
     #   django-crum
     #   edx-django-utils
@@ -94,7 +91,7 @@ django-crum==0.7.9
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
-django-waffle==2.4.1
+django-waffle==2.5.0
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -102,21 +99,21 @@ docutils==0.18.1
     # via
     #   -r requirements/quality.txt
     #   readme-renderer
-edx-django-utils==4.6.0
+edx-django-utils==5.0.0
     # via -r requirements/quality.txt
 edx-i18n-tools==0.9.1
     # via -r requirements/dev.in
-edx-lint==5.2.2
+edx-lint==5.2.4
     # via -r requirements/quality.txt
 edx-opaque-keys[django]==2.3.0
     # via
     #   -r requirements/quality.txt
     #   openedx-events
-fastavro==1.4.10
+fastavro==1.5.1
     # via
     #   -r requirements/quality.txt
     #   openedx-events
-filelock==3.6.0
+filelock==3.7.1
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -126,7 +123,7 @@ idna==3.3
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-importlib-metadata==4.11.3
+importlib-metadata==4.11.4
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -139,17 +136,12 @@ isort==5.10.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-jeepney==0.8.0
-    # via
-    #   -r requirements/quality.txt
-    #   keyring
-    #   secretstorage
-jinja2==3.1.1
+jinja2==3.1.2
     # via
     #   -r requirements/quality.txt
     #   code-annotations
     #   diff-cover
-keyring==23.5.0
+keyring==23.6.0
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -165,11 +157,11 @@ mccabe==0.7.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-newrelic==7.10.0.175
+newrelic==7.12.0.176
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
-openedx-events==0.8.2
+openedx-events==0.10.0
     # via -r requirements/quality.txt
 packaging==21.3
     # via
@@ -179,7 +171,7 @@ packaging==21.3
     #   tox
 path==16.4.0
     # via edx-i18n-tools
-pbr==5.8.1
+pbr==5.9.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
@@ -187,9 +179,9 @@ pep517==0.12.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-pip-tools==6.6.0
+pip-tools==6.6.2
     # via -r requirements/pip-tools.txt
-pkginfo==1.8.2
+pkginfo==1.8.3
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -208,7 +200,7 @@ pluggy==1.0.0
     #   tox
 polib==1.1.1
     # via edx-i18n-tools
-psutil==5.9.0
+psutil==5.9.1
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -226,13 +218,13 @@ pycparser==2.21
     #   cffi
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
-pygments==2.11.2
+pygments==2.12.0
     # via
     #   -r requirements/quality.txt
     #   diff-cover
     #   readme-renderer
     #   rich
-pylint==2.13.7
+pylint==2.14.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -256,12 +248,16 @@ pymongo==3.12.3
     # via
     #   -r requirements/quality.txt
     #   edx-opaque-keys
-pyparsing==3.0.8
+pynacl==1.5.0
+    # via
+    #   -r requirements/quality.txt
+    #   edx-django-utils
+pyparsing==3.0.9
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   packaging
-pytest==7.1.1
+pytest==7.1.2
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -270,7 +266,7 @@ pytest-cov==3.0.0
     # via -r requirements/quality.txt
 pytest-django==4.5.2
     # via -r requirements/quality.txt
-python-slugify==6.1.1
+python-slugify==6.1.2
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -287,7 +283,7 @@ readme-renderer==35.0
     # via
     #   -r requirements/quality.txt
     #   twine
-requests==2.27.1
+requests==2.28.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -302,14 +298,10 @@ rfc3986==2.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
-rich==12.2.0
+rich==12.4.4
     # via
     #   -r requirements/quality.txt
     #   twine
-secretstorage==3.3.2
-    # via
-    #   -r requirements/quality.txt
-    #   keyring
 six==1.16.0
     # via
     #   -r requirements/ci.txt
@@ -348,13 +340,17 @@ tomli==2.0.1
     #   pep517
     #   pylint
     #   pytest
+tomlkit==0.11.0
+    # via
+    #   -r requirements/quality.txt
+    #   pylint
 tox==3.25.0
     # via
     #   -r requirements/ci.txt
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/dev.in
-twine==4.0.0
+twine==4.0.1
     # via -r requirements/quality.txt
 typing-extensions==4.2.0
     # via
@@ -380,7 +376,7 @@ wheel==0.37.1
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-wrapt==1.14.0
+wrapt==1.14.1
     # via
     #   -r requirements/quality.txt
     #   astroid
